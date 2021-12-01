@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.top-body {
+    width: 100vw;
+    height: 400px;
+    background-color: rgb(27, 28, 43);
+    padding: 10px;
+    box-shadow: 1px 1px 6px black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(163, 163, 163);
+}
+
+form {
+    justify-content: center;
+    align-items: center;
+}
