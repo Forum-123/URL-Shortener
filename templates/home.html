@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<h1>Short.io!</h1>
+<p id="about">
+    Transform long URL website links into memorable short URLs with Short.io
+</p>
+{% if short_url %}
+<span>{{ short_url }}</span>
+{% endif %}
+{% endblock %}
