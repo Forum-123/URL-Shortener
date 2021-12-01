@@ -66,3 +66,11 @@ def stats():
         urls.append(url)
 
     return render_template('stats.html', urls=urls)
+
+@app.errorhandler(exceptions.NotFound)
+def handle_404(err):
+    return render_template('errors/404.html', title='Oops!'), 404
+
+@app.errorhandler(exceptions.InternalServerError)
+def handle_500(err):
+    return render_template('errors/500.html', title='Oops!'), 500
