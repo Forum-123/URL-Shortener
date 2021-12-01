@@ -13,6 +13,6 @@
     <input type="submit" id="url-submit" name="url-submit" class="submit-btn">
 </form>
 {% if short_url %}
-<a href="#" id="result" name="result" class="short-url">{{ short_url }}</a>
+<a href="{{short_url}}" id="result" name="result" class="short-url">{{ short_url }}</a>
 {% endif %}
 {% endblock %}

@@ -36,11 +36,15 @@ def home():
     return render_template('home.html', title='Short.io!')
 
 @app.route('/<url_id>', methods=['GET'])
-def redirect(url_id):
+def go_to_original(url_id):
+    print(123)
     """Increment clicks value whenever the shortened URL is visited"""
     connection = connect_to_db()
 
-    original_id = hashids.decode(id)
+    original_id = hashids.decode(url_id)
+    print(original_id)
+    print(url_id)
+    
     if original_id:
         original_id = original_id[0]
         print(original_id)
@@ -64,7 +68,7 @@ def redirect(url_id):
 @app.route('/stats')
 def stats():
     connection = connect_to_db()
-    stored_urls = connection.execute('SELECT id, created, original_url, clicks FROM URLs').fetchall()
+    stored_urls = connection.execute('SELECT * FROM URLs').fetchall()
     connection.close()
 
     urls = []
