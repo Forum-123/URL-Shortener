@@ -10,11 +10,13 @@ pytest = "*"
 [packages]
 flask = "*"
 flask-cors = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3"
 
 [scripts]
 dev = "bash -c \"export FLASK_ENV='development' && flask run --host=0.0.0.0\""
+start = "gunicorn app:app"
 test = "pytest ."
 coverage = "pytest --cov-report term-missing --cov=."
