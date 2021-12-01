@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6340ffe43b058fb0f380200ef1df03cde3dca961c27828ca8c92eb72c5f421d8"
+            "sha256": "e8af423a05dc5f40219163ce15c67ba9c32b74089397f687d7b9fce821a27431"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -55,6 +55,14 @@
             ],
             "index": "pypi",
             "version": "==20.1.0"
+        },
+        "hashids": {
+            "hashes": [
+                "sha256:6c3dc775e65efc2ce2c157a65acb776d634cb814598f406469abef00ae3f635c",
+                "sha256:8bddd1acba501bfc9306e7e5a99a1667f4f2cacdc20cbd70bcc5ddfa5147c94c"
+            ],
+            "index": "pypi",
+            "version": "==1.3.1"
         },
         "itsdangerous": {
             "hashes": [
@@ -160,7 +168,7 @@
                 "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
                 "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==1.16.0"
         },
         "werkzeug": {
@@ -168,7 +176,7 @@
                 "sha256:63d3dc1cf60e7b7e35e97fa9861f7397283b75d765afcaefd993d6046899de8f",
                 "sha256:aa2bb6fc8dee8d6c504c0ac1e7f5f7dc5810a9903e793b6f715a9f015bdadb9a"
             ],
-            "markers": "python_version >= '3.6'",
+            "index": "pypi",
             "version": "==2.0.2"
         }
     },
@@ -313,7 +321,7 @@
                 "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b",
                 "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
             ],
-            "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2'",
+            "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==0.10.2"
         },
         "tomli": {

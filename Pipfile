@@ -11,6 +11,8 @@ pytest = "*"
 flask = "*"
 flask-cors = "*"
 gunicorn = "*"
+werkzeug = "*"
+hashids = "*"
 
 [requires]
 python_version = "3"
