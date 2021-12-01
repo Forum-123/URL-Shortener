@@ -35,31 +35,31 @@ def home():
         return render_template('home.html', short_url=shorten_url)
     return render_template('home.html', title='Short.io!')
 
-# @app.route('/<url_id>', methods=['GET'])
-# def redirect(url_id):
-#     """Increment clicks value whenever the shortened URL is visited"""
-#     connection = connect_to_db()
+@app.route('/<url_id>', methods=['GET'])
+def redirect(url_id):
+    """Increment clicks value whenever the shortened URL is visited"""
+    connection = connect_to_db()
 
-#     original_id = hashids.decode(id)
-#     if original_id:
-#         original_id = original_id[0]
-#         print(original_id)
-#         url_query = connection.execute('SELECT original_url, clicks FROM URLs WHERE id = (?)', (original_id,)).fetchone()
+    original_id = hashids.decode(id)
+    if original_id:
+        original_id = original_id[0]
+        print(original_id)
+        url_query = connection.execute('SELECT original_url, clicks FROM URLs WHERE id = (?)', (original_id,)).fetchone()
 
-#         original_url = url_query['original_url']
-#         clicks = url_query['clicks']
+        original_url = url_query['original_url']
+        clicks = url_query['clicks']
 
-#         connection.execute('UPDATE URLs SET clicks = ? WHERE id = ?',
-#                      (clicks + 1, original_id))
+        connection.execute('UPDATE URLs SET clicks = ? WHERE id = ?',
+                     (clicks + 1, original_id))
 
-#         connection.commit()
-#         connection.close()
-#         print(url_id)
-#         print(original_id)
-#         print(original_url)
-#         return redirect(original_url)
-#     else:
-#         return redirect(url_for('home'))
+        connection.commit()
+        connection.close()
+        print(url_id)
+        print(original_id)
+        print(original_url)
+        return redirect(original_url)
+    else:
+        return redirect(url_for('home'))
 
 @app.route('/stats')
 def stats():
@@ -69,6 +69,8 @@ def stats():
 
     urls = []
     for url in stored_urls:
+        url = dict(zip(url.keys(), url))
+
         url['short_url'] = request.host_url + hashids.encode(url['id'])
         urls.append(url)
 
