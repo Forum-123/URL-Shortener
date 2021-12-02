@@ -7,12 +7,22 @@ body {
 
 .top-body nav {
     font-size: 1.2rem;
-    color: white;
+    color: black;
+    width: 80px;
+    height: 25px;
+    background-color: white;
+    border-radius: 2px;
+    text-align: center;
+    margin: 0 auto 0 40px;
+}
+
+.top-body nav a {
+    text-decoration: none;
 }
 
 .top-body {
     width: 100vw;
-    height: 400px;
+    height: 100vh;
     background-color: rgb(27, 28, 43);
     padding: 10px;
     box-shadow: 1px 1px 6px black;
@@ -31,9 +41,9 @@ p {
 }
 
 .short-url {
-    text-align: center;
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
+    margin-left: 40%;
 }
 
 form {
@@ -47,6 +57,7 @@ form {
     font-size: 1.3rem;
     box-shadow: 1px 2px 8px rgb(177, 177, 177);
     border-radius: 5px;
+    margin-bottom: 60px;
 }
 
 .link-input:focus {
@@ -75,12 +86,17 @@ form {
 
 footer {
     position: absolute;
-   bottom: 0;
-   margin-left: 45%;
-   font-size: 1.2rem;
-
+    bottom: 0;
+    margin-left: 45%;
+    font-size: 1.2rem;
+    background-color: rgb(27, 28, 43);
+    color: white;
 }
 
+table {
+    color: white;
+    text-align: center;
+}
 
 #about {
     text-align: center;
