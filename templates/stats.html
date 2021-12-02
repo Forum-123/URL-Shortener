@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<table style='color: white'>
+    <thead>
+        <tr>
+            <th>URL ID</th>
+            <th>Shorten URL</th>
+            <th>Original URL</th>
+            <th>Date Created</th>
+            <th>No. of Clicks</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for url in urls %}
+        <tr>
+            <th>{{ url['id'] }}</th>
+            <td>{{ url['short_url'] }}</td>
+            <td>{{ url['original_url'] }}</td>
+            <td>{{ url['time_created'] }}</td>
+            <td>{{ url['clicks'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

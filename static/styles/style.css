@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.top-body nav {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.top-body {
+    width: 100vw;
+    height: 400px;
+    background-color: rgb(27, 28, 43);
+    padding: 10px;
+    box-shadow: 1px 1px 6px black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(163, 163, 163);
+}
+
+.short-url {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+form {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.link-input {
+    width: 25vw;
+    padding: 10px 8px;
+    font-size: 1.3rem;
+    box-shadow: 1px 2px 8px rgb(177, 177, 177);
+    border-radius: 5px;
+}
+
+.link-input:focus {
+    outline: none;
+}
+
+.submit-btn {
+    width: 10vw;
+    padding: 10px 5px;
+    font-size: 1.3rem;
+    box-shadow: 1px 2px 8px rgb(177, 177, 177);
+    background-color: lavender;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:active {
+    background-color:rgb(27, 28, 43);
+    color: white
+}
+
+.submit-btn:hover {
+    background-color:rgb(27, 28, 43);
+    color: white
+}
+
+footer {
+    position: absolute;
+   bottom: 0;
+   margin-left: 45%;
+   font-size: 1.2rem;
+
+}
+
+
+#about {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
