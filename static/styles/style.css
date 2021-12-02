@@ -5,27 +5,37 @@ body {
     height: 100vh;
 }
 
-.top-body nav {
+/* Navbar */
+
+nav {
+    color: white;
+    background-color: rgb(27, 28, 43);
+    height: 4rem;
+    position: relative;
+}
+
+nav a, a:visited, a:hover, a:active {
     font-size: 1.2rem;
-    color: black;
-    width: 80px;
-    height: 25px;
-    background-color: white;
-    border-radius: 2px;
-    text-align: center;
-    margin: 0 auto 0 40px;
-}
-
-.top-body nav a {
+    color: white;
     text-decoration: none;
+    position: absolute;
+    top: 30%;
+    margin-left: 3rem;
 }
 
-.top-body {
+/* Main */
+
+main {
     width: 100vw;
     height: 100vh;
     background-color: rgb(27, 28, 43);
-    padding: 10px;
+    padding: 1rem 0;
     box-shadow: 1px 1px 6px black;
+}
+
+.scroll {
+    height: 100%;
+    overflow-y: scroll;
 }
 
 h1 {
@@ -34,10 +44,10 @@ h1 {
     color: white;
 }
 
-p {
+#about {
     text-align: center;
     font-size: 1.5rem;
-    color: rgb(163, 163, 163);
+    color: rgb(255, 255, 255);
 }
 
 .short-url {
@@ -84,22 +94,41 @@ form {
     color: white
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    margin-left: 45%;
-    font-size: 1.2rem;
-    background-color: rgb(27, 28, 43);
-    color: white;
-}
-
 table {
+    width: 90%;
+    border: 1px solid white;
     color: white;
     text-align: center;
+    margin: 0 auto;
 }
 
-#about {
-    text-align: center;
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#firstRow>th {
+    background-color: white;
+    color: rgb(27, 28, 43);
+}
+
+/* Footer */
+
+footer {
+    color: white;
+    background-color: rgb(27, 28, 43);
+    height: 3rem;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 30%;
+    margin: 0;
+    margin-left: 45%;
 }
