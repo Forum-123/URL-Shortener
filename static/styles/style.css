@@ -10,16 +10,14 @@ body {
 nav {
     color: white;
     background-color: rgb(27, 28, 43);
-    height: 4rem;
-    position: relative;
+    height: 3rem;
+    padding-top: 1.5rem;
 }
 
 nav a, a:visited, a:hover, a:active {
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
-    position: absolute;
-    top: 30%;
     margin-left: 3rem;
 }
 
@@ -29,7 +27,7 @@ main {
     width: 100vw;
     height: 100vh;
     background-color: rgb(27, 28, 43);
-    padding: 1rem 0;
+    padding: 2rem 0;
     box-shadow: 1px 1px 6px black;
 }
 
@@ -118,17 +116,14 @@ table, th, td {
 footer {
     color: white;
     background-color: rgb(27, 28, 43);
-    height: 3rem;
-    position: relative;
-    bottom: 0;
+    height: 4rem;
 }
 
 footer p {
     font-size: 1rem;
     color: white;
     text-decoration: none;
-    position: absolute;
-    bottom: 30%;
     margin: 0;
-    margin-left: 45%;
+    text-align: center;
+    padding: 1.5rem 0;
 }
