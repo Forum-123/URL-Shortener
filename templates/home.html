@@ -4,9 +4,7 @@
 {% block content %}
 
 <h1>Short.io!</h1>
-<p>
-    Transform long URL website links into memorable short URLs with Short.io
-</p>
+<p id="about">Transform long URL website links into memorable short URLs with Short.io</p>
 <form method="post">
     <input type="text" id="url" name="url" placeholder="Enter link here" class="link-input"
         value="{{ request.form['url'] }}" required>
