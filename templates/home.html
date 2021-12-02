@@ -2,11 +2,17 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block content %}
+
 <h1>Short.io!</h1>
-<p id="about">
+<p>
     Transform long URL website links into memorable short URLs with Short.io
 </p>
+<form method="post">
+    <input type="text" id="url" name="url" placeholder="Enter link here" class="link-input"
+        value="{{ request.form['url'] }}" required>
+    <input type="submit" id="url-submit" name="url-submit" class="submit-btn">
+</form>
 {% if short_url %}
-<span>{{ short_url }}</span>
+<a href="{{short_url}}" id="result" name="result" class="short-url">{{ short_url }}</a>
 {% endif %}
 {% endblock %}
