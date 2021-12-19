@@ -19,10 +19,8 @@ def home():
 
     if request.method == 'POST':
         url = request.form['url']
-
         if not url:
             return redirect(url_for('home'))
-
         url_query = connection.execute('INSERT INTO URLs (original_url) VALUES (?)', (url,))
 
         connection.commit()
@@ -40,14 +38,10 @@ def go_to_original(url_id):
     print(123)
     """Increment clicks value whenever the shortened URL is visited"""
     connection = connect_to_db()
-
     original_id = hashids.decode(url_id)
-    print(original_id)
-    print(url_id)
     
     if original_id:
         original_id = original_id[0]
-        print(original_id)
         url_query = connection.execute('SELECT original_url, clicks FROM URLs WHERE id = (?)', (original_id,)).fetchone()
 
         original_url = url_query['original_url']
@@ -58,9 +52,6 @@ def go_to_original(url_id):
 
         connection.commit()
         connection.close()
-        print(url_id)
-        print(original_id)
-        print(original_url)
         return redirect(original_url)
     else:
         return redirect(url_for('home'))
@@ -78,7 +69,7 @@ def stats():
         url['short_url'] = request.host_url + hashids.encode(url['id'])
         urls.append(url)
 
-    return render_template('stats.html', urls=urls)
+    return render_template('stats.html', urls=urls, title='Statistics')
 
 @app.errorhandler(exceptions.NotFound)
 def handle_404(err):

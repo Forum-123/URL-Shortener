@@ -2,27 +2,29 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block content %}
-<p id="about">View more information about each shortened link</p>
-<table class="scroll">
-    <thead>
-        <tr id="firstRow">
-            <th>URL ID</th>
-            <th>Shorten URL</th>
-            <th>Original URL</th>
-            <th>Date Created</th>
-            <th>No. of Clicks</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for url in urls %}
-        <tr>
-            <th>{{ url['id'] }}</th>
-            <td>{{ url['short_url'] }}</td>
-            <td>{{ url['original_url'] }}</td>
-            <td>{{ url['time_created'] }}</td>
-            <td>{{ url['clicks'] }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="scroll">
+    <p id="about">View more information about each shortened link</p>
+    <table>
+        <thead>
+            <tr id="firstRow">
+                <th>URL ID</th>
+                <th>Shortened URL</th>
+                <th>Original URL</th>
+                <th>Date Created</th>
+                <th>No. of Clicks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for url in urls %}
+            <tr>
+                <th>{{ url['id'] }}</th>
+                <td>{{ url['short_url'] }}</td>
+                <td>{{ url['original_url'] }}</td>
+                <td>{{ url['time_created'] }}</td>
+                <td>{{ url['clicks'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}
